@@ -40,9 +40,9 @@
         var authorizeButton = document.getElementById('authorize-button');
         if (authResult && !authResult.error) {
           authorizeButton.style.visibility = 'hidden';
-          Console.log(authResult);
+          console.log(authResult);
+          makeApiCall();
           getUserData(authResult);
-          //makeApiCall();
         } else {
           authorizeButton.style.visibility = '';
           authorizeButton.onclick = handleAuthClick;
@@ -63,8 +63,8 @@
                 dataType:'json',
 
                 success: function(msg){
-                    Console.log(msg)
-                    $('#content').val(msg.name)
+                    console.log(msg)
+                    $('#content').val($('#content').val() + '<br>' + msg.email)
                 },
 
                  error:function(xhr, ajaxOptions, thrownError){ 
