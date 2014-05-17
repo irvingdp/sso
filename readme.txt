@@ -1,7 +1,4 @@
-[fb login]
-sample url:
-http://irvingdp2014.azurewebsites.net/fb_sso_login.html
-
+[fb sso login]
 docs:
 https://developers.facebook.com/docs/facebook-login/login-flow-for-web/v2.0 -- with js sdk
 https://developers.facebook.com/docs/facebook-login/manually-build-a-login-flow/v2.0 -- manual
@@ -9,7 +6,10 @@ https://developers.facebook.com/docs/facebook-login/manually-build-a-login-flow/
 1.registe fb app for sso
 https://developers.facebook.com/apps/1442730812642323/dashboard/
 
-2.java script sso solution
+2.implement sso by java script
+
+	sample url: http://irvingdp2014.azurewebsites.net/fb_sso_login.html
+
 	fb/ping
 		'connected' -> Logged into your app and Facebook. -> fb/me
 		'not_authorized' -> The person is logged into Facebook, but not your app. -> login process
@@ -28,6 +28,18 @@ https://developers.facebook.com/apps/1442730812642323/dashboard/
 	https://graph.facebook.com/v2.0/me?access_token=CAAUgJZCGYFBMBAPKs2uwiMnYP7J4gGUdocm87nZBfVDZBqYHOHZCSOTiHWcVGpjA8ZC9nnPKQPIUcVFsgBE9nZCyhOmgN5YUZBiVJoukq6ldWH7uflXN8PfZCrcpCZA3bZC1QpmCERacVY8xtP53QpXIJK0YrSt0oXtNXD8zcPiPPlnOlZAjjHVWXbX1JHaZCXBVLBZA96e5lC0FZCiAZDZD
 
 
+[goolge sso login]
+docs:
+使用 Google APIs Client Library for JavaScript - https://developers.google.com/api-client-library/javascript/features/authentication?hl=zh-tw
+原理 - https://developers.google.com/accounts/docs/OAuth2UserAgent?hl=zh-tw#overview
+
+1.create google project & create OAuth 2.0 API (guid:http://blog.kenyang.net/2012/09/google-oauth-20-google-api.html)
+https://console.developers.google.com/project
+
+2.implement sso by java script
+	sample url: http://irvingdp2014.azurewebsites.net/google_sso_login.html
+
+	
 
 
 
