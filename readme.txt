@@ -36,6 +36,7 @@ docs:
 1.create google project & create OAuth 2.0 API & create publick API access's key 
 (google console: https://console.developers.google.com/project/apps~primal-insight-583/apiui/credential?authuser=0)
 (教學: http://blog.kenyang.net/2012/09/google-oauth-20-google-api.html)
+note:enalbe the 'google plues api'
 https://console.developers.google.com/project
 	Client ID	66287016993-569ofvd3svmu77d9ig3h4a60l2olkb8j.apps.googleusercontent.com
 	Client secret	d7jpuBs3OORk2OyHAxvP8wHD

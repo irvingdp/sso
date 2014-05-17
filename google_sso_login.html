@@ -23,7 +23,7 @@
       var apiKey = 'AIzaSyACKUbcdy39z2H-kMPiP8vjS2p2TA0W57k';
 
       // To enter one or more authentication scopes, refer to the documentation for the API.
-      var scopes = 'https://www.googleapis.com/auth/plus.me';
+      var scopes = 'https://www.googleapis.com/auth/userinfo.email';
 
       // Use a button to handle authentication the first time.
       function handleClientLoad() {
@@ -40,7 +40,9 @@
         var authorizeButton = document.getElementById('authorize-button');
         if (authResult && !authResult.error) {
           authorizeButton.style.visibility = 'hidden';
-          makeApiCall();
+          Console.log(authResult);
+          getUserData(authResult);
+          //makeApiCall();
         } else {
           authorizeButton.style.visibility = '';
           authorizeButton.onclick = handleAuthClick;
@@ -52,8 +54,29 @@
         return false;
       }
 
+      function getUserData(authResult){
+
+         $.ajax({
+                url: 'https://www.googleapis.com/oauth2/v1/userinfo',
+                data: {alt:'json',access_token:authResult.access_token},
+                type:"GET",
+                dataType:'json',
+
+                success: function(msg){
+                    Console.log(msg)
+                    $('#content').val(msg.name)
+                },
+
+                 error:function(xhr, ajaxOptions, thrownError){ 
+                    alert(xhr.status); 
+                    alert(thrownError); 
+                 }
+            });
+       
+      }
       // Load the API and make an API call.  Display the results on the screen.
       function makeApiCall() {
+
         gapi.client.load('plus', 'v1', function() {
           var request = gapi.client.plus.people.get({
             'userId': 'me'
