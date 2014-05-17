@@ -82,7 +82,7 @@
       console.log('Successful login for: ' + response.name);
       console.log(response);
       document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
+        'full name:' + response.name + '<br>' + 'email:' + response.email;
     });
   }
 
@@ -111,8 +111,8 @@
   the FB.login() function when clicked.
 -->
 <a href="#" onclick="fbLogin();"><img src="fblogin.jpg" border="0" alt=""></a>
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
+<!--<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>-->
 
 <div id="status">
 </div>
