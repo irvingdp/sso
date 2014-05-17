@@ -33,13 +33,24 @@ docs:
 使用 Google APIs Client Library for JavaScript - https://developers.google.com/api-client-library/javascript/features/authentication?hl=zh-tw
 原理 - https://developers.google.com/accounts/docs/OAuth2UserAgent?hl=zh-tw#overview
 
-1.create google project & create OAuth 2.0 API (guid:http://blog.kenyang.net/2012/09/google-oauth-20-google-api.html)
+1.create google project & create OAuth 2.0 API & create publick API access's key 
+(google console: https://console.developers.google.com/project/apps~primal-insight-583/apiui/credential?authuser=0)
+(教學: http://blog.kenyang.net/2012/09/google-oauth-20-google-api.html)
 https://console.developers.google.com/project
+	Client ID	66287016993-569ofvd3svmu77d9ig3h4a60l2olkb8j.apps.googleusercontent.com
+	Client secret	d7jpuBs3OORk2OyHAxvP8wHD
+	api key:AIzaSyACKUbcdy39z2H-kMPiP8vjS2p2TA0W57k
 
 2.implement sso by java script
 	sample url: http://irvingdp2014.azurewebsites.net/google_sso_login.html
 
-	
+
+
+
+
+
+
+
 
 
 
